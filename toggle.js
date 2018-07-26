@@ -1,15 +1,3 @@
-// chrome.browserAction.onClicked.addListener(function() {
-//   console.log('test')
-//   var wpbar = document.querySelector('#wpadminbar').style.display
-//   var h = document.querySelector('html').style.marginTop
-//   if (wpbar != 'none') {
-//     wpbar = 'none'
-//     h = '0 !important'
-//   } else {
-//     wpbar = 'initial'
-//     h = '35px !important'
-//   }
-// })
 function sendMessage(msg) {
   chrome.runtime.sendMessage(msg)
 }
