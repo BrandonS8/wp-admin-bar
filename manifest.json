@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "Wordpress Toolbar Toggle",
+  "description":
+    "This extension will hide or show the admin toolbar on Wordpress sites",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "title": "Test"
+  },
+  // "background": {
+  //   "scripts": ["toggle.js"]
+  // },
+  "permissions": ["tabs", "notifications", "http://*/", "https://*/"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["toggle.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}
